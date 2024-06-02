@@ -1,0 +1,113 @@
+.navbar{
+    width: 1090px;
+    height: 60px;
+    top: 40px;
+    left: 175px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+.button{
+    width: 180px;
+    height: 60px;
+    border-radius: 4px;
+    background: #000000;
+}
+
+.navitem{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: left;
+}
+
+.heading {
+    width: 618px;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 64px;
+    text-align: left;
+    margin-top: 6rem;
+}
+
+.headingText{
+    position: relative;
+    top: 17px;
+    width: 638px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #8c8981;
+}
+
+.gridsRow {
+    display:grid;
+    grid-template-rows: 230px 90px;
+}
+
+.gridsCol {
+    margin-left: 7rem;
+    display: grid;
+    grid-template-columns: 45% 55%;
+}
+
+.image {
+    position: absolute;
+    z-index: 1;
+    top: -30px;
+    left: 10px;
+}
+
+.phone1 {
+    position:relative;
+    z-index: 3;
+    right: 7rem;
+    bottom: 4rem;
+}
+
+.phone2 {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: 0px;
+}
+
+.pattern {
+    position: absolute;
+    z-index: 0;
+    top: 50px;
+    right: 10px;
+}
+
+.card {
+    position: relative;
+    z-index: 1;
+}
+
+.cardHero {
+    position: absolute;
+    z-index: 2;
+    top:3rem;
+    left:10rem;
+}
+
+.cardBrush {
+    position: absolute;
+    z-index: 0;
+    top:-1rem;
+}
+
+.orangeHeading {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0.16em;
+    text-align: left;
+    color: #FF5555;
+}
+
+.cardHeading {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: left;
+}

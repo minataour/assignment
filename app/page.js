@@ -1,9 +1,146 @@
 import Image from "next/image";
+import Navbar from "./components/header/navbar";
+import styles from "@/app/components/ui/home.module.css"
+import Button from "./components/ui/button";
+import CardHero from "./components/ui/cardHero";
+import Description from "./components/ui/description";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
+    <main className="min-h-screen pt-12 pl-12 pb-12 pr-0">
+      <Navbar />
+      <div className="flex ml-28">
+        <div className={`${styles.gridsRow} bg-[length:525px_425px] bg-no-repeat bg-[center_top_-2rem]`} style={{backgroundImage: `url('/paintbrush 1.svg')`}}>
+          <h1 className={styles.heading}>
+            Make The Best Financial Decisions
+          </h1>
+          <p className={styles.headingText}>Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu adipiscing sociis arcu lorem porttitor.</p>
+          <div className="flex gap-x-8">
+            <Button text="Get Started" hasIcon={true}/>
+            <button className="flex">
+              <div className="m-4">
+                <Image 
+                  src="/playButton.svg"
+                  alt="play"
+                  width={29}
+                  height={29}
+                />
+              </div>
+              <p className="pt-[20px]">
+                Watch Video
+              </p>
+            </button>
+          </div>
+          <div className="">
+            <Image 
+              src="/fancyBanner.png"
+              alt="banner"
+              width={570}
+              height={358}
+            />
+          </div>
+        </div>
+
+        <div className="flex mt-6">
+          <div className="relative">
+            <div className="relative">
+              <div className={styles.phone2}>
+                <Image 
+                  src="/iPhone-13-2.png"
+                  alt="phone"
+                  width={700}
+                  height={0}
+                />
+              </div>
+              <div className={styles.phone1}>
+                <Image 
+                  src="/iPhone-13-1.png"
+                  alt="phone"
+                  width={700}
+                  height={0}
+                />
+              </div>
+
+            </div>
+            <div className={styles.image}>
+              <Image 
+                src="/Frame 1.png"
+                alt="??"
+                width={700}
+                height={700}
+              />
+            </div>
+          </div>
+          <div className={styles.pattern}>
+              <Image 
+                src="/paintbrush 2.png"
+                alt="pattern RED"
+                width={600}
+                height={214}
+              />
+           </div>
+        </div>
+      </div>
+
+      <div className="mt-[50px] mb-10">
+        <div className="flex flex-row">
+          <CardHero 
+            brushImage="/paintbrush-features.png"
+            phone="/iPhone-13-features.png"
+            top="-1rem"
+          />
+
+          <div className="flex flex-col overflow-visible ml-[-50px] mt-[8rem] z-10">
+            <p className={styles.orangeHeading}>
+              FEATURES
+            </p>
+            <h1 className={styles.cardHeading}>
+              Uifry Premium
+            </h1>
+
+            <Description 
+              icon="/cube.svg"
+              heading="Budgeting Intervals"
+              point="Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu adipiscing sociis arcu lorem porttitor."
+            />
+
+            <Description 
+              icon="/cube2.svg"
+              heading="Budgeting Intervals"
+              point="Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu adipiscing sociis arcu lorem porttitor."
+            />
+
+            <Description 
+              icon="/star.svg"
+              heading="Budgeting Intervals"
+              point="Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu adipiscing sociis arcu lorem porttitor."
+            />
+          </div>
+
+          <div className="shrink-0 z-0">
+            <Image 
+              src="/paintbrush 3.png"
+              alt="pattern half"
+              width={300}
+              height={200}
+            />
+          </div>
+        </div>
+
+        <div>
+          <div className="flex flex-row">
+            <div className="">
+              <p className={styles.orangeHeading}>
+                ADVANTAGES
+              </p>
+              <h1 className={styles.cardHeading}>
+                Why choose Urify?
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           Get started by editing&nbsp;
           <code className="font-mono font-bold">app/page.js</code>
@@ -107,7 +244,7 @@ export default function Home() {
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
-      </div>
+      </div> */}
     </main>
   );
 }
