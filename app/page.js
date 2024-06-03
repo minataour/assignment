@@ -7,83 +7,116 @@ import Description from "./components/ui/description";
 import FaqCard from "./components/ui/faq";
 
 export default function Home() {
+  const star= {
+    transform: "rotate(-30deg)",
+  }
+
   return (
     <main className="min-h-screen pt-12 pl-12 pb-12 pr-0 bg-[#FFFFFF]">
       <Navbar />
-      <div className="flex ml-28">
-        <div className={`${styles.gridsRow} bg-[length:525px_425px] bg-no-repeat bg-[center_top_-2rem]`} style={{backgroundImage: `url('/paintbrush 1.svg')`}}>
-          <h1 className={styles.heading}>
-            Make The Best Financial Decisions
-          </h1>
-          <p className={styles.headingText}>Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu adipiscing sociis arcu lorem porttitor.</p>
-          <div className="flex gap-x-8">
-            <Button text="Get Started" hasIcon={true}/>
-            <button className="flex">
-              <div className="m-4">
-                <Image 
-                  src="/playButton.svg"
-                  alt="play"
-                  width={29}
-                  height={29}
-                />
-              </div>
-              <p className="pt-[20px]">
-                Watch Video
-              </p>
-            </button>
-          </div>
-          <div className="">
-            <Image 
-              src="/fancyBanner.png"
-              alt="banner"
-              width={570}
-              height={358}
-            />
-          </div>
+      <div>
+        <div className="">
+          <Image 
+            src="Star 1.svg"
+            alt="star"
+            width={48}
+            height={48}
+            style={star}
+          />
         </div>
-
-        <div className="flex mt-6">
-          <div className="relative">
-            <div className="relative">
-              <div className={styles.phone2}>
-                <Image 
-                  src="/iPhone-13-2.png"
-                  alt="phone"
-                  width={700}
-                  height={0}
-                />
-              </div>
-              <div className={styles.phone1}>
-                <Image 
-                  src="/iPhone-13-1.png"
-                  alt="phone"
-                  width={700}
-                  height={0}
-                />
-              </div>
-
-            </div>
-            <div className={styles.image}>
+        <div className="flex ml-28">
+          <div className={`${styles.gridsRow} bg-[length:525px_425px] bg-no-repeat bg-[center_top_-2rem]`} style={{backgroundImage: `url('/paintbrush 1.svg')`}}>
+            <h1 className={styles.heading}>
+              Make The Best Financial Decisions
+            </h1>
+            <p className={styles.headingText}>Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu adipiscing sociis arcu lorem porttitor.</p>
+            <div className="flex gap-x-8">
+              <Button text="Get Started" hasIcon={true}/>
+              <button className="flex">
+                <div className="m-4">
+                  <Image 
+                    src="/playButton.svg"
+                    alt="play"
+                    width={29}
+                    height={29}
+                  />
+                </div>
+                <p className="pt-[20px]">
+                  Watch Video
+                </p>
+              </button>
+              <div className="absolute mt-[8rem] ml-[6rem]">
               <Image 
-                src="/Frame 1.png"
-                alt="??"
-                width={700}
-                height={700}
+                src="Star 1.svg"
+                alt="star"
+                width={48}
+                height={48}
+                style={star}
+              />
+              </div>
+            </div>
+            <div className="">
+              <Image 
+                src="/fancyBanner.png"
+                alt="banner"
+                width={570}
+                height={358}
               />
             </div>
           </div>
-          <div className={styles.pattern}>
-              <Image 
-                src="/paintbrush 2.png"
-                alt="pattern RED"
-                width={600}
-                height={214}
-              />
-           </div>
+
+          <div className="flex mt-6">
+            <div className="relative">
+              <div className="relative">
+                <div className={styles.phone2}>
+                  <Image 
+                    src="/iPhone-13-2.png"
+                    alt="phone"
+                    width={700}
+                    height={0}
+                  />
+                </div>
+                <div className={styles.phone1}>
+                  <Image 
+                    src="/iPhone-13-1.png"
+                    alt="phone"
+                    width={700}
+                    height={0}
+                  />
+                </div>
+
+              </div>
+              <div className={styles.image}>
+                <Image 
+                  src="/Frame 1.png"
+                  alt="??"
+                  width={700}
+                  height={700}
+                />
+              </div>
+            </div>
+            <div className={styles.pattern}>
+                <Image 
+                  src="/paintbrush 2.png"
+                  alt="pattern RED"
+                  width={600}
+                  height={214}
+                />
+            </div>
+          </div>
         </div>
       </div>
 
       <div className="mt-[50px]">
+            <div className="absolute mt-[8rem]">
+              <Image 
+                src="Star 1.svg"
+                alt="star"
+                width={48}
+                height={48}
+                style={star}
+              />
+            </div>
         <div id="features" className="flex flex-row mb-20">
           <CardHero 
             brushImage="/paintbrush-features.png"
@@ -167,6 +200,7 @@ export default function Home() {
               alt="star"
               width={48}
               height={48}
+              style={star}
             />
           </div>
           <div className="flex flex-row">
@@ -224,7 +258,17 @@ export default function Home() {
                   brushPosition="four"
                   people
                 />
+                <div className="absolute top-[37rem]">
+                <Image 
+                src="Star 1.svg"
+                alt="star"
+                width={48}
+                height={48}
+                style={star}
+              />
+            </div>
               </div>
+              
 
               <div className="flex flex-col basis-4/5 mt-[7rem] ml-[20rem]">
                 <Description 
@@ -247,18 +291,21 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-[80%] ml-[7rem] mb-10">
+        <div className="w-[80%] ml-[7rem]">
           <div>
             <p className={`${styles.topicHeading} text-[#FF5555]`}>FAQ</p>
             <h2 className={`${styles.cardHeading} w-[40%]`}>Frequently Asked Questions</h2>
           </div>
+          
           <div className="grid grid-cols-2 gap-4 mt-8">
             <FaqCard 
               color="red"
             />
+            <div>
             <FaqCard 
               color="white"
             />
+            </div>
             <FaqCard 
               color="white"
             />
@@ -274,8 +321,33 @@ export default function Home() {
           </div>
         </div>
 
-        <div>
-
+        <div className="mt-40 mb-80"> 
+          <div className="bg-black w-[80%] h-[508px] rounded-[10px] ml-28 absolute z-10">
+            <Image 
+              src="/download.png"
+              alt="dall"
+              width={1090}
+              height={508}
+            />
+          </div>
+          <div className="z-0 relative top-[-11rem] right-[4rem]">
+            <Image 
+              src="/paintbrush-download.png"
+              alt="brush"
+              width={407}
+              height={237}
+            />
+            <div className="absolute bottom-[3rem] left-[4rem]">
+              <Image 
+                src="Star 1.svg"
+                alt="star"
+                width={48}
+                height={48}
+                style={star}
+              />
+            </div>
+            
+          </div>
         </div>
 
 
