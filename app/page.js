@@ -4,6 +4,7 @@ import styles from "@/app/components/ui/home.module.css"
 import Button from "./components/ui/button";
 import CardHero from "./components/ui/cardHero";
 import Description from "./components/ui/description";
+import FaqCard from "./components/ui/faq";
 
 export default function Home() {
   return (
@@ -83,7 +84,7 @@ export default function Home() {
       </div>
 
       <div className="mt-[50px]">
-        <div className="flex flex-row mb-20">
+        <div id="features" className="flex flex-row mb-20">
           <CardHero 
             brushImage="/paintbrush-features.png"
             phone="/iPhone-13-features.png"
@@ -91,12 +92,12 @@ export default function Home() {
           />
 
           <div className="flex flex-col overflow-visible ml-[-50px] mt-[8rem] z-10">
-            <p className={styles.orangeHeading}>
+            <p className={`${styles.topicHeading} text-[#FF5555] text-left`}>
               FEATURES
             </p>
-            <h1 className={styles.cardHeading}>
+            <h2 className={`${styles.cardHeading} text-left`}>
               Uifry Premium
-            </h1>
+            </h2>
 
             <Description 
               icon="/cube.svg"
@@ -133,12 +134,12 @@ export default function Home() {
         <div>
           <div className="flex flex-row">
             <div className="flex flex-col ml-28 mt-44">
-              <p className={styles.orangeHeading}>
+              <p className={`${styles.topicHeading} text-[#FF5555] text-left`}>
                 ADVANTAGES
               </p>
-              <h1 className={styles.cardHeading}>
+              <h2 className={`${styles.cardHeading} text-left`}>
                 Why choose Urify?
-              </h1>
+              </h2>
 
               <Description 
                 icon="/Bell.svg"
@@ -160,7 +161,7 @@ export default function Home() {
         </div>
 
         <div>
-          <div className="ml-[35rem]">
+          <div className="ml-[35rem] ">
             <Image 
               src="Star 1.svg"
               alt="star"
@@ -193,115 +194,86 @@ export default function Home() {
                   isBig
                   width="normal"
                 />
+                <div className="mt-[10rem] ml-[22rem]">
+                  <Image 
+                    src="Star 1.svg"
+                    alt="star"
+                    width={64}
+                    height={64}
+                  />
+                </div>
             </div>
           </div>
         </div>
-      </div>
-      {/* <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+
+        <div id="about us" className="mt-[4rem]">
+          <div className="text-center px-[28rem] py-0]">
+            <p className={`${styles.topicHeading} text-black`}>
+              TETIMONIALS
+            </p>
+            <h2 className={styles.cardHeading}>
+                What Our Users Say About Us?
+            </h2>
+          </div>
+
+          <div className="flex flex-row">
+            <div className="relative flex">
+                <CardHero 
+                  brushImage="/paintbrush-testimony.png"
+                  phone="/people.png"
+                  brushPosition="four"
+                  people
+                />
+              </div>
+
+              <div className="flex flex-col basis-4/5 mt-[7rem] ml-[20rem]">
+                <Description 
+                  heading="The Best Financial Accounting App Ever!"
+                  point="“Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit mauris etiam odio. Duis tristique lacus, et blandit viverra nisl velit. Sed mattis rhoncus, diam suspendisse sit nunc, gravida eu. Lectus eget eget ac dolor neque lorem sapien, suspendisse aliquam.”"
+                  isBig
+                  width="small"
+                  noImage
+                />
+                <div className="mt-6">
+                  <Image 
+                    src="/peopleRow.png"
+                    alt="face"
+                    width={180}
+                    height={40}
+                  />
+                </div>
+                <p className="text=lg font-semibold mt-6">Nick Jonas</p>
+              </div>
+          </div>
+        </div>
+
+        <div className="w-[80%] ml-[7rem]">
+          <div>
+            <p className={`${styles.topicHeading} text-[#FF5555]`}>FAQ</p>
+            <h2 className={`${styles.cardHeading} w-[40%]`}>Frequently Asked Questions</h2>
+          </div>
+          <div className="grid grid-cols-2 gap-4 mt-8">
+            <FaqCard 
+              color="red"
             />
-          </a>
+            <FaqCard 
+              color="white"
+            />
+            <FaqCard 
+              color="white"
+            />
+            <FaqCard 
+              color="red"
+            />
+            <FaqCard 
+              color="red"
+            />
+            <FaqCard 
+              color="white"
+            />
+          </div>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div> */}
     </main>
   );
 }
