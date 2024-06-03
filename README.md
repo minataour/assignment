@@ -1,6 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 Choose Javascript and tailwind while creating project.
 
+## Figma Design for the page as reference
+https://www.figma.com/design/jwIbGDy0spLxxFvWYuzo8l/App-Landing-Page-Finance-Bank-Money-(Community)?node-id=0-1&t=lzp9RVIgDLLSf1AK-0
+
 ## Getting Started
 
 First, run the development server:
