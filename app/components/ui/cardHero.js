@@ -1,7 +1,9 @@
 import Image from "next/image";
 import styles from "@/app/components/ui/home.module.css"
 
-export default function CardHero({brushImage, phone, top, bottom, left, right}) {
+export default function CardHero({brushImage, phone, top, bottom, left, right, extra}) {
+  const position = `absolute z-0 top-[${top}]`;
+
     return(
         <div className="shrink-0">
             <div className={styles.card}>
@@ -11,12 +13,12 @@ export default function CardHero({brushImage, phone, top, bottom, left, right}) 
                 width={680}
                 height={720}
               />
-              <div className={`absolute z-0 top-[${top}] bottom-[${bottom}] left-[${left}] right-[${right}]`}>
+              <div className={position}>
                 <Image 
                   src={brushImage}
                   alt="brush"
                   width={600}
-                  height={285}
+                  height={250}
                 />
               </div>
               <div className={styles.cardHero}>
@@ -27,6 +29,14 @@ export default function CardHero({brushImage, phone, top, bottom, left, right}) 
                   height={500}
                 />
               </div>
+              {extra && <div className="absolute top-[17rem] right-[7rem] z-10">
+                <Image 
+                  src="/On Hold.png"
+                  alt="hold"
+                  width={300}
+                  height={60}
+                />
+              </div>}
             </div>
         </div>
     )

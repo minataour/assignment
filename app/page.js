@@ -82,8 +82,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-[50px] mb-10">
-        <div className="flex flex-row">
+      <div className="mt-[50px]">
+        <div className="flex flex-row mb-20">
           <CardHero 
             brushImage="/paintbrush-features.png"
             phone="/iPhone-13-features.png"
@@ -102,18 +102,21 @@ export default function Home() {
               icon="/cube.svg"
               heading="Budgeting Intervals"
               point="Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu adipiscing sociis arcu lorem porttitor."
+              width="160%"
             />
 
             <Description 
               icon="/cube2.svg"
               heading="Budgeting Intervals"
               point="Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu adipiscing sociis arcu lorem porttitor."
+              width="160%"
             />
 
             <Description 
               icon="/star.svg"
               heading="Budgeting Intervals"
               point="Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu adipiscing sociis arcu lorem porttitor."
+              width="160%"
             />
           </div>
 
@@ -129,14 +132,30 @@ export default function Home() {
 
         <div>
           <div className="flex flex-row">
-            <div className="">
+            <div className="flex flex-col ml-28 mt-44">
               <p className={styles.orangeHeading}>
                 ADVANTAGES
               </p>
               <h1 className={styles.cardHeading}>
                 Why choose Urify?
               </h1>
+
+              <Description 
+                icon="/Bell.svg"
+                heading="Clever Notifications"
+                point="Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit mauris etiam odio. Duis tristique lacus, et blandit viverra nisl velit. Sed mattis rhoncus, diam suspendisse sit nunc, gravida eu. Lectus eget eget ac dolor neque lorem sapien, suspendisse aliquam."
+                isBig
+                width="100%"
+              />
             </div>
+              <CardHero 
+                brushImage="/paintbrush-advantages.png"
+                phone="/iPhone-13-advantages.png"
+                top="10rem"
+                right="11rem"
+                extra
+                
+              />
           </div>
         </div>
       </div>
