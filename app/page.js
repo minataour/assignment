@@ -8,7 +8,7 @@ import FaqCard from "./components/ui/faq";
 
 export default function Home() {
   return (
-    <main className="min-h-screen pt-12 pl-12 pb-12 pr-0">
+    <main className="min-h-screen pt-12 pl-12 pb-12 pr-0 bg-[#FFFFFF]">
       <Navbar />
       <div className="flex ml-28">
         <div className={`${styles.gridsRow} bg-[length:525px_425px] bg-no-repeat bg-[center_top_-2rem]`} style={{backgroundImage: `url('/paintbrush 1.svg')`}}>
@@ -247,7 +247,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-[80%] ml-[7rem]">
+        <div className="w-[80%] ml-[7rem] mb-10">
           <div>
             <p className={`${styles.topicHeading} text-[#FF5555]`}>FAQ</p>
             <h2 className={`${styles.cardHeading} w-[40%]`}>Frequently Asked Questions</h2>
@@ -273,7 +273,78 @@ export default function Home() {
             />
           </div>
         </div>
+
+        <div>
+
+        </div>
+
+
+        <div className="flex flex-row mt-20 ml-28">
+          <div className="">
+            <Image 
+              src="/Group.svg"
+              alt="logo"
+              width={110}
+              height={35}
+            />
+            <div className="flex flex-row mt-4 ml-1">
+              <Image 
+                src="/mail.svg"
+                alt="mail"
+                width={20}
+                height={18}
+              />
+              <p className="text-[16px]/[26px] ml-2">Help@Frybix.Com</p>
+            </div>
+            <div className="flex flex-row mt-4 ml-1">
+              <Image 
+                src="/telephone.svg"
+                alt="mail"
+                width={19}
+                height={18}
+              />
+              <p className="text-[16px]/[26px] ml-2">+1 234 456 678 89</p>
+            </div>
+          </div>
+
+          <div className="ml-14">
+            <h2 className="text-[32px]/[42px] font-medium">Links</h2>
+            <p className={styles.footLink}>Home</p>
+            <p className={styles.footLink}>About Us</p>
+            <p className={styles.footLink}>Bookings</p>
+            <p className={styles.footLink}>Blog</p>
+          </div>
+
+          <div className="ml-16">
+            <h2 className="text-[32px]/[42px] font-medium">Legal</h2>
+            <p className={styles.footLink}>Terms Of Use</p>
+            <p className={styles.footLink}>Privacy Policy</p>
+            <p className={styles.footLink}>Cookie Policy</p>
+          </div>
+
+          <div className="ml-14">
+            <h2 className="text-[32px]/[42px] font-medium">Product</h2>
+            <p className={styles.footLink}>Take Tour</p>
+            <p className={styles.footLink}>Live Chat</p>
+            <p className={styles.footLink}>Reviews</p>
+          </div>
+
+          <div className="ml-14">
+            <h2 className="text-[32px]/[42px] font-medium">Newsletter</h2>
+            <p className={styles.footLink}>Stay Up To Date</p>
+            <div className="flex flex-row">
+              <input className="bg-gray-100 mt-6 p-5 absolute" placeholder="Your Email">
+              </input>
+              <div className="relative flex top-[26px] left-[9rem]">
+                <Button text="Subscribe" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      <footer className={styles.footerLine}>
+          <p className="text-[16px]/[26px] text-center mt-8">Copyright 2022 uifry.com all rights reserved</p>
+      </footer>
     </main>
   );
 }

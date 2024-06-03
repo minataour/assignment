@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "@/app/components/ui/home.module.css"
 import Button from "../ui/button";
 
 export default function Navbar(){

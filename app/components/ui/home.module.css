@@ -12,6 +12,7 @@
     height: 60px;
     border-radius: 4px;
     background: #000000;
+    z-index: 10;
 }
 
 .navitem{
@@ -115,3 +116,16 @@
     font-weight: 500;
     margin-top: 1rem
 }
+
+.footerLine{ 
+    border-top: 1px solid;
+    margin-top: 6rem; 
+}
+
+.footLink {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
