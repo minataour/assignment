@@ -87,7 +87,7 @@ export default function Home() {
           <CardHero 
             brushImage="/paintbrush-features.png"
             phone="/iPhone-13-features.png"
-            top="-1rem"
+            brushPosition="one"
           />
 
           <div className="flex flex-col overflow-visible ml-[-50px] mt-[8rem] z-10">
@@ -102,21 +102,21 @@ export default function Home() {
               icon="/cube.svg"
               heading="Budgeting Intervals"
               point="Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu adipiscing sociis arcu lorem porttitor."
-              width="160%"
+              width="long"
             />
 
             <Description 
               icon="/cube2.svg"
               heading="Budgeting Intervals"
               point="Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu adipiscing sociis arcu lorem porttitor."
-              width="160%"
+              width="long"
             />
 
             <Description 
               icon="/star.svg"
               heading="Budgeting Intervals"
               point="Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu adipiscing sociis arcu lorem porttitor."
-              width="160%"
+              width="long"
             />
           </div>
 
@@ -145,17 +145,55 @@ export default function Home() {
                 heading="Clever Notifications"
                 point="Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit mauris etiam odio. Duis tristique lacus, et blandit viverra nisl velit. Sed mattis rhoncus, diam suspendisse sit nunc, gravida eu. Lectus eget eget ac dolor neque lorem sapien, suspendisse aliquam."
                 isBig
-                width="100%"
+                width="normal"
               />
             </div>
               <CardHero 
                 brushImage="/paintbrush-advantages.png"
                 phone="/iPhone-13-advantages.png"
-                top="10rem"
-                right="11rem"
+                brushPosition="two"
                 extra
-                
+                extraImage="/On Hold.png"
+                secondryPosition="bill"
               />
+          </div>
+        </div>
+
+        <div>
+          <div className="ml-[35rem]">
+            <Image 
+              src="Star 1.svg"
+              alt="star"
+              width={48}
+              height={48}
+            />
+          </div>
+          <div className="flex flex-row">
+            <div className="relative flex">
+              <CardHero 
+                brushImage="/paintbrush-customizable.png"
+                phone="/iPhone-13-customizable.png"
+                brushPosition="three"
+              />
+              
+            </div>
+            <div className="z-10 mt-[13rem] ml-[-7rem]">
+                <Image 
+                  src="/visa.png"
+                  alt="hold"
+                  width={500}
+                  height={160}
+                />
+              </div>
+            <div className="flex flex-col basis-4/5 mt-[12rem] mr-[8rem] ml-[10rem]">
+              <Description 
+                  icon="/star-big.svg"
+                  heading="Fully Customizable"
+                  point="Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit mauris etiam odio. Duis tristique lacus, et blandit viverra nisl velit. Sed mattis rhoncus, diam suspendisse sit nunc, gravida eu. Lectus eget eget ac dolor neque lorem sapien, suspendisse aliquam."
+                  isBig
+                  width="normal"
+                />
+            </div>
           </div>
         </div>
       </div>

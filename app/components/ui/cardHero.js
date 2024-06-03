@@ -1,8 +1,16 @@
 import Image from "next/image";
 import styles from "@/app/components/ui/home.module.css"
 
-export default function CardHero({brushImage, phone, top, bottom, left, right, extra}) {
-  const position = `absolute z-0 top-[${top}]`;
+export default function CardHero({brushImage, phone, brushPosition, extra, extraImage, secondryPosition}) {
+  const position = {
+    one: "absolute z-0 top-[-1rem]",
+    two: "absolute z-0 top-[10rem] right-[11rem]",
+    three: "absolute z-0 top-[3rem] left-[4rem]"
+  }
+
+  const extraPosition = {
+    bill: "absolute top-[17rem] right-[7rem] z-10",
+  }
 
     return(
         <div className="shrink-0">
@@ -13,7 +21,7 @@ export default function CardHero({brushImage, phone, top, bottom, left, right, e
                 width={680}
                 height={720}
               />
-              <div className={position}>
+              <div className={`${position[brushPosition]}`}>
                 <Image 
                   src={brushImage}
                   alt="brush"
@@ -29,9 +37,9 @@ export default function CardHero({brushImage, phone, top, bottom, left, right, e
                   height={500}
                 />
               </div>
-              {extra && <div className="absolute top-[17rem] right-[7rem] z-10">
+              {extra && <div className={`${extraPosition[secondryPosition]}`}>
                 <Image 
-                  src="/On Hold.png"
+                  src={extraImage}
                   alt="hold"
                   width={300}
                   height={60}
